@@ -20,6 +20,6 @@ Documentation - Jenkins and Terraform, steps followed and how I arrived at each 
 ## Useful tools
 - [aws](https://aws.amazon.com/) - Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally.
 - [jenkins](https://www.jenkins.io/) - my main development tool
-- [terraform](https://www.terraform.io/) - terraform itself, the second main development tool: `tfenv install`
+- [terraform](https://www.terraform.io/) - terraform itself, the second main development tool: `tf install`
 
 ![design](docs/assets/designs.svg)
