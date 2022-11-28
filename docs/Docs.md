@@ -12,7 +12,7 @@
 # cicd pipeline with jenkins
 
 This diagram describes the planned pipeline:
-![cicd-with-jenkins](docs/cicd-with-jenkins.svg)
+![cicd-with-jenkins](assets/cicd-with-jenkins.svg)
 
 Under Jenkins, these are my plans: 
 - Setting up Jenkins Server on AWS Cloud
@@ -27,8 +27,8 @@ Under Jenkins, these are my plans:
 - Open an account with aws. It is recommended that, IAM user say iamadmin should be use to create the virtual machine(EC2), to follow through this demo instead of using root accounts.
 
 - For firewall; I set the custom inbound rule at port 8080 for Jenkins. From where I will also expose it on the host from anywhere. Image below;
-![aws-1](docs/assets/aws-1.png)
-![aws-2](docs/assets/aws-2.png)
+![aws-1](assets/aws-1.png)
+![aws-2](assets/aws-2.png)
 
 - Docker runtime; Next is to install Docker as my runtime environment by running below command;
     `sudo yum update -y`
@@ -41,15 +41,15 @@ Under Jenkins, these are my plans:
 I then copy the IP address and port to browser to view Jenkins app.
 
 - Initialise Jenkins; Jenkins should display on the browser and I supplied one time use credential located at that path in red inside the container. How did I get this password? I change permission and ssh into the server while I cd into the .pem file download. With this command; ssh -i <identity_file.pem> ec2-user@<hostname>
-![aws-3](docs/assets/aws-3.png)
+![aws-3](assets/aws-3.png)
 
 - Enter the container; I then enter into the container by running this command;
     `docker exec -it <container id> /bin/bash`
 to view the content of the password with this command;
     `cat /var/jenkins_home/secrets/initialAdminPassword`
-![aws-4](docs/assets/aws-4.png)
+![aws-4](assets/aws-4.png)
 - Create admin user; I prefer go with Install suggested plugins and create admin user
-![aws-5](docs/assets/aws-5.png)
+![aws-5](assets/aws-5.png)
 
 # iac with terraform
 
