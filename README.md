@@ -1,7 +1,8 @@
 ## Description
 Build automation in Jenkins. Using multi-branch pipeline while changes in Jenkinsfile will be trigger by GitHub webhook. The whole idea is to demostrate how continous integration pipeline works with Jenkins, which is the core of DevOps culture.
+![design](docs/assets/designs.svg)
 
-## Why I use Jenkins
+## Why Jenkins
 I find out that Jenkins is not only extensible but also has a thriving plugin ecosystem. Some of the possible steps that can be performed using Jenkins are: Software build using build systems such as Gradle, Maven, and more. 
 
 ## Limitation
@@ -22,4 +23,4 @@ To better understand this project, I am documenting every steps, project code an
 - [VSCode](https://code.visualstudio.com/) - preferred IDE 
 - [jenkins](https://www.jenkins.io/) - the main ci tool
 
-![design](docs/assets/designs.svg)
+
