@@ -9,13 +9,13 @@ Jenkins doesn't allow server-to-server federation, which can cause performance i
 
 ## Project Set Up and Installation
 There are few possible ways to run this project. But will prefer you to follow these steps;
-# Enter the project directory
+### Enter the project directory
 Forked and clone the repository into your machine. Change directory into your desired directory by running the command; `git clone https://github.com/deoluoyinlola/ci-pipeline-with-jenkins`
 
-# Install required packages
+### Install required packages
 
 ## Documentation
-To better understand this project, I am documenting every steps, project code and every command line arguments that I used. For this, I have created a separate directory at the root directory for this project named 'docs', it also holds some of the project assets(images and pictures)
+To better understand this project, I am documenting every steps, project code and every command line arguments that I used. For this, I have created a separate README file inside the docs directory at the root directory for this project, the directory also holds some of the project assets(images and pictures)
 
 ## Useful tools
 - [aws](https://aws.amazon.com/) - cloud platform, offering over 200 fully featured services from data centers globally.
