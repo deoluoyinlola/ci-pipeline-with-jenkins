@@ -1,25 +1,25 @@
-## ci-pipeline-with-jenkins
-Build automation in Jenkins. Using multi-branch pipeline while changes in Jenkinsfile will be trigger by GitHub webhook.
-
-## Why I use Jenkins and Terraform
-
-- **Jenkins**: Jenkins is an open-source solution comprising an automation server to enable continuous integration and continuous delivery (CI/CD), automating the various stages of software development such as build, test, and deployment.
-I find out that Jenkins is not only extensible but also has a thriving plugin ecosystem. Some of the possible steps that can be performed using Jenkins are: Software build using build systems such as Gradle, Maven, and more. 
-- **Terraform**: With Terraform’s declarative approach, the code always represents the latest state of your infrastructure. At a glance, I can determine what’s currently deployed and how it’s configured, without having to worry about history or timing. This also makes it easy to create reusable code, since I don’t need to manually account for the current state of the world.
-
-## Why not to use - Limitation
-- **Jenkins**: Jenkins doesn't allow server-to-server federation, which can cause performance issues in large-scale environments.
-- **Terraform**: Security of “state files” is a concern because managing the resources is impossible if the terraform state is ever lost. It's complicated while using a local files. It does not support any revert function for wrong/invalid changes to resources.
-
 ## Description
-I use Jenkins for build automation and Terraform for infrastructure as code. The whole idea is to practically show how ci/cd pipeline works with Jenkins and Terraform, which is the core of DevOps culture.
+Build automation in Jenkins. Using multi-branch pipeline while changes in Jenkinsfile will be trigger by GitHub webhook. The whole idea is to demostrate how continous integration pipeline works with Jenkins, which is the core of DevOps culture.
+
+## Why I use Jenkins
+I find out that Jenkins is not only extensible but also has a thriving plugin ecosystem. Some of the possible steps that can be performed using Jenkins are: Software build using build systems such as Gradle, Maven, and more. 
+
+## Limitation
+Jenkins doesn't allow server-to-server federation, which can cause performance issues in large-scale environments.
+
+## Project Set Up and Installation
+There are few possible ways to run this project. But will prefer you to follow these steps;
+# Enter the project directory
+Forked and clone the repository into your machine. Change directory into your desired directory by running the command; `git clone https://github.com/deoluoyinlola/ci-pipeline-with-jenkins`
+
+# Install required packages
 
 ## Documentation
-Documentation - Jenkins and Terraform, steps followed and how I arrived at each are well written inside docs directory. The directory also holds some of the projects assets(images and pictures)
+To better understand this project, I am documenting every steps, project code and every command line arguments that I used. For this, I have created a separate directory at the root directory for this project named 'docs', it also holds some of the project assets(images and pictures)
 
 ## Useful tools
-- [aws](https://aws.amazon.com/) - Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally.
-- [jenkins](https://www.jenkins.io/) - my main development tool
-- [terraform](https://www.terraform.io/) - terraform itself, the second main development tool: `tf install`
+- [aws](https://aws.amazon.com/) - cloud platform, offering over 200 fully featured services from data centers globally.
+- [VSCode](https://code.visualstudio.com/) - preferred IDE 
+- [jenkins](https://www.jenkins.io/) - the main ci tool
 
 ![design](docs/assets/designs.svg)
