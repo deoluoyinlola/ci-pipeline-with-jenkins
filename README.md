@@ -1,5 +1,5 @@
-## cicd-pipeline-with-jenkins-and-terraform
-Build automation in Jenkins and Infrastructure as code with terraform
+## ci-pipeline-with-jenkins
+Build automation in Jenkins. Using multi-branch pipeline while changes in Jenkinsfile will be trigger by GitHub webhook.
 
 ## Why I use Jenkins and Terraform
 
