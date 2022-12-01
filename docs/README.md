@@ -14,7 +14,9 @@
   * [Credential and Authentication](#credential-authentication)
   * [Configure Git Repo](#configure-git-repo)
 * [Pipeline with Jenkinsfile](#pipeline-with-jenkinsfile)
-  * [Jenkinsfile defined](#jenkinsfile-defined)
+  * [Define Dependencies File](#jenkinsfile-defined)
+  * [Dockerfile define](#jenkinsfile-defined)
+  * [Jenkinsfile define](#jenkinsfile-defined)
 <!-- TOC -->
 
 This diagram describes the design:
@@ -88,8 +90,20 @@ Here, am going to configure maven plugin, install docker on the container, confi
 ![credential](assets/credential.png)
 
 ## Configure Git Repo
-- The whole essence of the project is to automate building and testing where git repo need to get connected to the Jenkins jobs.
+- The whole essence of the project is to automate building and testing where git repo need to get connected to the Jenkins jobs through webhook. 
+- I am going to populate the repo with the app source code base - src directory.
 
 # Pipeline with Jenkinsfile
+Here, I am going to define pom.xml file which contain all the app dependecies, Dockerfile which define base image, commands, CMD for entrypoint and Jenkinsfile that define all the stages and steps.
+## Define Dependencies File
+- I am going to define all dependencies for the java application inside a pom.xml file
 
-## Jenkinsfile defined
+## Dockerfile define
+- In addition to build with maven, I can as well build an image and push to DockerHub with Docker. I am going to achieve this through Dockerfile file defination at the root of the repo
+
+## Jenkinsfile define
+- The final steps to achieve this automation is to define the workflow inside the Jenkinsfile file at the root of this repo.
+- I am going to extract some functions to groovy file and get referenced inside the Jenkinsfile
+
+
+# Viola, uccessed to automate my integration workflow!
