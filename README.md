@@ -1,5 +1,5 @@
 ## Description
-Build automation in Jenkins. Using multi-branch pipeline while changes in Jenkinsfile will be trigger by GitHub webhook. The whole idea is to demostrate how continous integration pipeline works with Jenkins, which is the core of DevOps culture.
+Build automation in Jenkins. Using multi-branch pipeline while changes in Jenkinsfile will be trigger by GitHub webhook. The whole idea is to demostrate how I automate maven to build java app, Docker to build and push image with Jenkins, which is the core of DevOps culture.
 ![design](docs/assets/designs.svg)
 
 ## Why Jenkins

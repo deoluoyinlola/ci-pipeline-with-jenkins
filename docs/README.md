@@ -9,10 +9,11 @@
   * [Initialise Jenkins](#initialise-jenkins)
   * [Create admin user](#create-admin-user)
 * [Install and Configure Plugins and Tools](#install-and-configure-plugins-and-tools)
-  * [Install plugins](#install-plugins)
-* [GitHub Credential and Webhook Configure](#github-credential-and-webhook-configure)
-  * [GitHub credential](#github-credential)
-* [Jenkinsfile and App code Defined](#jenkinsfile-and-app-code-defined)
+  * [Configure Maven plugins](#configure-maven-plugins)
+  * [Configure Docker](#configure-docker)
+  * [Credential and Authentication](#credential-authentication)
+  * [Configure Git Repo](#configure-git-repo)
+* [Pipeline with Jenkinsfile](#pipeline-with-jenkinsfile)
   * [Jenkinsfile defined](#jenkinsfile-defined)
 <!-- TOC -->
 
@@ -59,8 +60,20 @@ to view the content of the password with this command;
 
 # Install and Configure plugins and Tools
 
-## Install-plugins
+## Configure Maven plugins
+- By default, maven plugin already install as suggested when initialing Jenkins. Only need to configure from  `Global Tool Configuration` under ``Manage Jenkins``tab by the left corner of the UI. 
+![maven-config](assets/maven-config.png)
+- I give it a name and choose a version say maven and 3.6.3 respectively, then save. This enable maven command in my job. 
 
-# GitHub Credential and Webhook Configure
+## Configure Docker
+- If desire tools not available, in this case Docker, need to install it as plugins from the UI or directly on Jenkins server, which make it more flexible. Going for later option. So as to make Docker available in the Jenkins jobs.
 
-# Jenkinsfile and App code Defined
+## Credential and Authentication
+- Need to configure and grant access to all tools and services Jenkins need to execute the jobs, in this case GitHub and Docker
+
+## Configure Git Repo
+- The whole essence of the project is to automate building and testing where git repo need to get connected to the Jenkins jobs.
+
+# Pipeline with Jenkinsfile
+
+## Jenkinsfile defined
