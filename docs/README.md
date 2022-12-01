@@ -73,18 +73,19 @@ Here, am going to configure maven plugin, install docker on the container, confi
 - If a desire tools not available, in this case Docker, need to install it as plugins from the UI or directly on Jenkins server, which make it more flexible. Going for later option. So as to make Docker available in the Jenkins jobs.
 - I will be attaching a volume to the Jenkins from the host file. Mounting the docker directoty from the AWS VM to container as volume. I stopped the container, create new one and re-attached the volume.
 - Run the command; 
-```docker run -p 8080:8080 -p 50000:50000 -d \``
+```docker run -p 8080:8080 -p 50000:50000 -d \```
 ```-v jenkins_home:/var/jenkins_home \```
 ```-v /var/run/docker.sock:/var/run/docker.sock \```
 ```-v $(which docker):/usr/bin/docker jenkins/jenkins:lts```
-- Might want to check as root user if Docker now available inside container with the command; ```docker exec -u 0 -it <container-id> bash``` then ``docker ps``
-![docker-inside-container](assets/docker-inside-container.png)
-
-
-
+- File permission; to grant permission on the mounted file from the VM inside the container for Jenkins user. I need to enter the container as root user with ``docker exec -u 0 -it a5608668a7a8 bash``
+- Then change permission; ``chmod 666 /var/run/docker.sock``
+![docker-inside](assets/docker-inside.png)
+- Now I can execute docker command with Jenkins
 
 ## Credential and Authentication
-- Need to configure and grant access to all tools and services Jenkins need to execute the jobs, in this case GitHub and Docker
+- Need to configure and grant access to all tools and services Jenkins need to execute the jobs, in this case GitHub for the repository and Docker to build the image and push.
+- Starting from the UI > Manage Jenkins > Manage Credential
+![credential](assets/credential.png)
 
 ## Configure Git Repo
 - The whole essence of the project is to automate building and testing where git repo need to get connected to the Jenkins jobs.
